@@ -1,1 +1,452 @@
-/*# sourceMappingURL=style.css.map */
+:root {
+  --bg-main: rgba(19, 22, 25, 1);
+  --bg-input: rgba(54, 58, 61, 1);
+  --color-main: rgba(205, 206, 207, 1);
+  --color-white: rgba(232, 233, 233, 1);
+  --color-muted: rgba(155, 156, 158, 1);
+  --color-dark: rgba(12, 17, 50, 1);
+  --color-primmary: rgba(182, 240, 156, 1);
+  --color-hover: rgba(200, 244, 180, 1);
+  --color-hover2: rgba(219, 247, 205, 1);
+  --color-noble-600: rgba(26, 29, 33, 1);
+  --color-noble-500: rgba(54, 58, 61, 1);
+  --color-noble-400: rgba(104, 107, 110, 1);
+}
+
+html {
+  font-size: 100%;
+}
+@media screen and (max-width: 430px) {
+  html {
+    font-size: 87%;
+  }
+}
+
+body {
+  background: var(--bg-main);
+  font-size: 1rem;
+  font-family: "PLusjakartaSans";
+  font-weight: 400;
+  color: var(--color-main);
+}
+
+@font-face {
+  font-family: "PLusjakartaSans";
+  src: url(../assets/fonts/PlusJakartaSans-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PLusjakartaSans";
+  src: url(../assets/fonts/PlusJakartaSans-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PLusjakartaSans";
+  src: url(../assets/fonts/PlusJakartaSans-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PLusjakartaSans";
+  src: url(../assets/fonts/PlusJakartaSans-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.login__left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  height: 100%;
+}
+.login__logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: auto;
+}
+.login__line {
+  width: 44%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 48px auto;
+  gap: 16px;
+}
+.login__line span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid rgb(54, 58, 61);
+}
+@media screen and (max-width: 430px) {
+  .login__line span {
+    display: none;
+  }
+}
+.login__line-text {
+  color: var(--color-noble-400);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  letter-spacing: 0.15px;
+}
+.login__socials {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 570px) {
+  .login__socials {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+}
+.login__socials-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+  border-radius: 12px;
+  background: var(--color-noble-600);
+  color: var(--color-noble-400);
+  font-size: 1rem;
+  padding: 12px 42px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+  -webkit-transition: 320ms ease-in;
+  transition: 320ms ease-in;
+}
+.login__socials-btn:hover {
+  background: var(--color-noble-500);
+}
+.login__signup {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.login__signup-text {
+  color: var(--color-noble-400);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+}
+.login__signup-link {
+  background: linear-gradient(45deg, rgb(130, 219, 247) 0%, rgb(182, 240, 156) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
+@media screen and (max-width: 572px) {
+  .login__right {
+    display: none;
+  }
+}
+
+.form {
+  min-width: 496px;
+}
+@media screen and (max-width: 570px) {
+  .form {
+    min-width: 350px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .form {
+    min-width: 250px;
+  }
+}
+.form__title {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 44px;
+  margin-bottom: 24px;
+}
+.form__title span {
+  background: linear-gradient(45deg, rgb(77, 98, 229) 0%, rgb(135.15, 221.08, 237.99) 45%, rgb(182, 240, 156) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+.form__subtitle {
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  letter-spacing: 0.15px;
+  margin-bottom: 58px;
+}
+.form__input {
+  position: relative;
+  width: 100%;
+}
+.form__input :focus-within {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(132, 220, 245, 0.24);
+          box-shadow: 0px 0px 0px 4px rgba(132, 220, 245, 0.24);
+  background: rgb(26, 29, 33);
+  border-radius: 8px;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  border: 1px solid rgb(130, 219, 247);
+}
+.form__input svg {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+}
+.form__input input {
+  background: rgb(26, 29, 33);
+  border: 1px solid rgb(54, 58, 61);
+  border-radius: 8px;
+  padding: 12px 16px 12px 52px;
+  width: 100%;
+  color: var(--color-main);
+}
+.form__input input ::-webkit-input-placeholder {
+  color: var(--color-muted);
+}
+.form__input input ::-moz-placeholder {
+  color: var(--color-muted);
+}
+.form__input input :-ms-input-placeholder {
+  color: var(--color-muted);
+}
+.form__input input ::-ms-input-placeholder {
+  color: var(--color-muted);
+}
+.form__input input ::placeholder {
+  color: var(--color-muted);
+}
+.form__input input:-webkit-autofill, .form__input input:-webkit-autofill:hover, .form__input input:-webkit-autofill:focus, .form__input input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(26, 29, 33) inset !important;
+  -webkit-text-fill-color: var(--color-main) !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.form__input input.error {
+  border: 1px solid rgb(255, 51, 51);
+}
+.form__input input.error ~ .form__input-error {
+  opacity: 1;
+  visibility: visible;
+}
+.form__input-error {
+  color: #D0302F;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 140ms ease-in;
+  transition: 140ms ease-in;
+}
+.form__password-toggle {
+  position: absolute;
+  right: 3%;
+  top: 20%;
+  border-radius: 10px;
+  background: var(--color-noble-600);
+  border: 1px solid rgb(54, 58, 61);
+  color: var(--color-main);
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.form__help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 48px;
+}
+@media screen and (max-width: 360px) {
+  .form__help {
+    display: block;
+  }
+}
+.form__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+@media screen and (max-width: 360px) {
+  .form__checkbox {
+    margin-bottom: 15px;
+  }
+}
+.form__checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.form__checkbox-input:checked ~ .form__checkbox-box::after {
+  opacity: 1;
+}
+.form__checkbox-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 23px;
+  border: 1px solid rgb(54, 58, 61);
+  border-radius: 4px;
+  background: rgb(26, 29, 33);
+  cursor: pointer;
+  -webkit-transition: 440ms ease-out;
+  transition: 440ms ease-out;
+}
+.form__checkbox-box::after {
+  content: "";
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  -webkit-transition: 340ms ease-out;
+  transition: 340ms ease-out;
+}
+.form__checkbox-text {
+  color: var(--color-main);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+}
+.form__forgot {
+  background: linear-gradient(45deg, rgb(130, 219, 247) 0%, rgb(182, 240, 156) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+}
+
+.button {
+  border-radius: 12px;
+  background: var(--color-primmary);
+  border: 3px solid var(--color-primmary);
+  color: rgb(12, 17, 50);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  padding: 12px 0;
+  -webkit-transition: 560ms ease-out;
+  transition: 560ms ease-out;
+}
+.button:hover {
+  color: rgb(200, 244, 180);
+  background: none;
+  border: 3px solid rgb(200, 244, 180);
+}
+
+.button-form {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+:root {
+
+	// color
+	--bg-main: rgba(19, 22, 25, 1);
+	--bg-input: rgba(54, 58, 61, 1);
+
+	--color-main: rgba(205, 206, 207, 1);
+	--color-white: rgba(232, 233, 233, 1);
+	--color-muted: rgba(155, 156, 158, 1);
+	--color-dark: rgba(12, 17, 50, 1);
+
+	--color-primmary: rgba(182, 240, 156, 1);
+	--color-hover: rgba(200, 244, 180, 1);
+	--color-hover2:  rgba(219, 247, 205, 1);
+
+	--color-noble-600: rgba(26, 29, 33, 1);
+	--color-noble-500: rgba(54, 58, 61, 1);
+	--color-noble-400: rgba(104, 107, 110, 1);
+
+}
+// fs fw lh 
+$fs-very-small: 0.75rem;
+$fs-small: 0.875rem;
+$fs-body: 1rem;
+$fs-h4: 1.125rem;
+$fs-h3: 1.25rem;
+$fs-h2: 1.5rem;
+$fs-h1: 1.75rem;
+$fs-h1-big: 2rem;
+$fs-h1-very-big: 2.25rem;
+
+$lh-heading-xl: 2.75rem;  
+$lh-heading-l: 2.5rem;    
+$lh-heading-m: 2.25rem;  
+$lh-heading-s: 2rem;      
+$lh-heading-xs: 1.75rem;  
+
+$lh-body-xl: 1.75rem;     
+$lh-body-l: 1.5rem;       
+$lh-body-m: 1.25rem;     
+$lh-body-s: 1.125rem;    
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bolrd: 700;
+
+$radius-sm: 8px;   
+$radius-md: 12px;    
+$radius-lg: 16px;

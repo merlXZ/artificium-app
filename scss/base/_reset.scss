@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+button,
+input,
+textarea {
+	outline: none;
+	border: none;
+}
