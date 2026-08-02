@@ -1,0 +1,10 @@
+@mixin lg-title {
+		background: linear-gradient(45.00deg, rgba(130, 219, 247, 1) 0%,rgba(182, 240, 156, 1) 100%);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-clip: text;
+		font-size: $fs-body;
+		line-height: $lh-body-l;
+		font-weight: $fw-semibold;
+		letter-spacing: 0.15px;
+}

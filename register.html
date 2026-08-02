@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/register.js" defer></script>
+</head>
+
+<body>
+
+<!--============ SECTION ============-->
+<section class="register">
+	<div class="register-left">
+		<div class="register__header">
+			<a href="#" class="register__header-logo"><img src="assets/img/logo.svg" alt="logo"></a>
+			<a href="index.html" class="register__header-login">Log In</a>
+		</div>
+		<form class="register__form form" id="registerForm">
+			<div class="form__step form__step-1 form__step-active">
+				<h2 class="form__text">Connect with your team and bring your<br> creative ideas to life.</h2>
+				<div class="form__fields">
+					<div class="form__fields-block">
+						<span class="form__fields-text">First name</span>
+						<input type="text" class="form__fields-input name" placeholder="First name">
+						<span class="form__fields-error">Incorrect input!</span>
+					</div>
+					<div class="form__fields-block">
+						<span class="form__fields-text">Last name</span>
+						<input type="text" class="form__fields-input name" placeholder="Last name">
+						<span class="form__fields-error">Incorrect input!</span>
+					</div>
+					<div class="form__fields-block">
+						<span class="form__fields-text">Password</span>
+						<input type="text" class="form__fields-input password" placeholder="Password">
+						<span class="form__fields-error">Incorrect input!</span>
+					</div>
+					<div class="form__fields-block">
+						<span class="form__fields-text">Repeat password</span>
+						<input type="text" class="form__fields-input password" placeholder="Repeat password">
+						<span class="form__fields-error">Incorrect input!</span>
+					</div>
+				</div>
+				<div class="form__agreement">
+					<label class="form__checkbox">
+						<input type="checkbox" class="form__checkbox-input">
+						<span class="form__checkbox-box"></span>
+						<span class="form__checkbox-text">I agree with Terms and conditions</span>
+					</label>
+				</div>
+				<button class="form__create button">Create free account</button>
+			</div>
+			<div class="form__step form__step-2">
+				<h2 class="form__text">Join or Create a Workspace</h2>
+				<p class="form__subtitle">Connect with others by joining an existing workspace or create a new one to<br> collaborate with your team.</p>
+				<div class="form__workspace">
+					<input type="url" class="form__workspace-input" placeholder="Your workspace URL .artificium.app">
+					<button class="form__workspace-button button">Join Workspace</button>
+				</div>
+				<div class="line line-register">
+					<span></span>
+					<p class="line-text">or</p>
+					<span></span>
+				</div>
+				<button class="form__creates">Create new Workspace</button>
+			</div>
+		</form>
+		<div class="register__footer">
+			<p class="register__footer-copyright">Artificium.app © 2023</p>
+			<span class="register__footer-text">Privacy Policy</span>
+		</div>
+	</div>
+	<img src="assets/register/img/Illustration.png" alt="Illustration" class="register-right">
+</section>
+
+</div>
+
+</body>
+
+</html>
