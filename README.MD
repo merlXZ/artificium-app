@@ -1,5 +1,7 @@
 # Artificium — AI Tools Dashboard 🚀
 
+**[Live Preview(GitHub Pages)](https://merlxz.github.io/artificium-app/)**
+
 An interactive dashboard and user interface for an artificial intelligence platform. The project features a modern web interface with an emphasis on clean design, readability, and a strict responsive grid.
 
 ## 🎯 About The Project
