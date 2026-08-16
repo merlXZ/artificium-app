@@ -1,0 +1,51 @@
+.message {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	width: 100%;
+	border-radius: 20px;
+	background: var(--NobleBlack-800, rgba(13, 15, 16, 1));
+	padding: 24px;
+	@media screen and (max-width: 425px) {
+		gap: 10px;
+		padding: 15px;
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	&__voice {
+		cursor: pointer;
+		background: none;
+	}
+	&__input {
+		flex-grow: 1;
+		padding: 12px 0px;
+		background: none;
+		font-size: $fs-body;
+		line-height: $lh-body-l;
+		letter-spacing: 0.15px;
+		color: var(--color-muted);
+		font-weight: $fw-medium;
+	}
+	&__attachment {
+		margin-left: auto;
+		background: none;
+		cursor: pointer;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		border-radius: 12px;
+		background: var(--color-noble-600);
+		padding: 12px;
+		cursor: pointer;
+		transition: 302ms ease-in;
+		&:hover {
+			background: var(--color-noble-500);
+		}
+		@media screen and (max-width: 425px) {
+			padding: 8px;
+		}
+	}
+}

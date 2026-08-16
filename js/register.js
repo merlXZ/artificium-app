@@ -1,6 +1,7 @@
 const registerInput = document.querySelectorAll('.form__fields-input');
 const registerBtn = document.querySelector('.form__create');
 const formStep = document.querySelectorAll('.form__step');
+const registerPasswordInput = document.querySelectorAll('.fields-password');
 
 if(registerBtn) {
 	registerBtn.addEventListener('click', (event) => {
@@ -26,5 +27,6 @@ if(registerBtn) {
 		}
 	})
 }
+
 
 
