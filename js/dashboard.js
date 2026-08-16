@@ -14,25 +14,26 @@ buttonMenu.addEventListener('click', () => {
 
 
 // header
-const tabsList = document.querySelector('.tabs__list');
+// const tabsList = document.querySelector('.tabs__list');
+const tabsLink = document.querySelectorAll('.tabs__link');
 const buttonEdit = document.querySelector('.project__top-button');
 const buttonEditClose = document.querySelector('.modal__close');
 const modal = document.querySelector('.modal');
 const modalOverlay = document.querySelector('.modal__overlay');
 
-// tabsLink.forEach(tabs => {
+tabsLink.forEach(tabs => {
 
-// 	tabs.addEventListener('click', () => {
-// 		tabsLink.forEach(link => {
-// 			link.classList.remove('active')
-// 		})
-// 		tabs.classList.add('active');
-// 	})
-
-// })
-tabsList.addEventListener('click', () => {
+	tabs.addEventListener('click', () => {
+		tabsLink.forEach(link => {
+			link.classList.remove('active')
+		})
+		tabs.classList.add('active');
+	})
 
 })
+// tabsList.addEventListener('click', () => {
+
+// })
 
 if(modal && buttonEdit) {
 
