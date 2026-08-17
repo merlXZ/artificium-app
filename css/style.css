@@ -1045,6 +1045,21 @@ textarea {
 }
 .sidebar__items {
   padding: 24px 0px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.sidebar__items::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar__items::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar__items::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.sidebar__items::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .sidebar__label {
   color: var(--color-muted);
@@ -1245,6 +1260,10 @@ textarea {
     stroke-dasharray: 78.6882705688px;
   }
 }
+.hidden {
+  display: none;
+}
+
 .starter {
   padding: 100px 0px;
   display: -webkit-box;
@@ -1407,6 +1426,34 @@ textarea {
   }
 }
 
+#animated-title {
+  display: inline-block;
+}
+
+.char {
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  display: inline-block;
+  -webkit-animation: fadeInChar 0.6s ease forwards;
+          animation: fadeInChar 0.6s ease forwards;
+}
+
+@-webkit-keyframes fadeInChar {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInChar {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1733,6 +1780,7 @@ textarea {
   }
 }
 .invite__edit {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1779,11 +1827,24 @@ textarea {
   font-weight: 500;
   cursor: pointer;
 }
-.invite__edit-list {
+.invite__edit-block {
   margin-left: auto;
   cursor: pointer;
 }
-.invite__edit-list span {
+.invite__edit-block span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-primmary);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+}
+.invite__edit-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1791,11 +1852,68 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
-  color: var(--color-primmary);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.15px;
+}
+.invite__edit-text {
+  padding: 12px;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  line-height: 1.125rem;
   font-weight: 500;
+  letter-spacing: 0.15px;
+}
+.invite__edit-list {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  top: 115%;
+  left: -1%;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 8px 10px -6px rgba(6, 7, 8, 0.06), 0px 25px 50px -12px rgba(6, 7, 8, 0.16);
+          box-shadow: 0px 8px 10px -6px rgba(6, 7, 8, 0.06), 0px 25px 50px -12px rgba(6, 7, 8, 0.16);
+  background: rgb(13, 15, 16);
+  padding: 4px 4px 4px 4px;
+  -webkit-transition: 308ms ease-in;
+  transition: 308ms ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+.invite__edit-list.open {
+  opacity: 1;
+  visibility: visible;
+}
+.invite__edit-item {
+  position: relative;
+  padding: 12px;
+}
+.invite__edit-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(6, 7, 8, 0.05), 0px 1px 2px -1px rgba(6, 7, 8, 0.05), inset 0px 2px 12px 0px rgba(26, 29, 33, 0.64);
+          box-shadow: 0px 1px 3px 0px rgba(6, 7, 8, 0.05), 0px 1px 2px -1px rgba(6, 7, 8, 0.05), inset 0px 2px 12px 0px rgba(26, 29, 33, 0.64);
+  background: linear-gradient(145.32deg, rgba(215.22, 236.94, 236.94, 0.16) 0%, rgba(204.48, 234.81, 234.81, 0) 90%);
+  opacity: 0;
+  -webkit-transition: 450ms ease-in;
+  transition: 450ms ease-in;
+}
+.invite__edit-item:hover::before {
+  opacity: 1;
+}
+.invite__edit-link {
+  -webkit-transition: 450ms ease-in;
+  transition: 450ms ease-in;
 }
 .invite__button {
   display: -webkit-box;

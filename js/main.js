@@ -21,7 +21,7 @@ if(inputEmail && inputPassword) {
 			localStorage.removeItem('userEmail');
 		}
 
-		if(emailValue !== '' && passwordValue !== '') {
+		if(	checkInput() && checkPassword() ) {
 			inputEmail.classList.remove('error');
 			inputPassword.classList.remove('error');
 			window.location.href = 'dashboard.html'
@@ -32,14 +32,26 @@ if(inputEmail && inputPassword) {
 
 	})
 	
-	inputEmail.addEventListener('blur', () => {
+	function checkInput() {
 		if(inputEmail.value.includes('@') && inputEmail.value !== '') {
 			inputEmail.classList.remove('error');
+			return true
 		} else {
 			inputEmail.classList.add('error');
-
+			return false
 		}
-	})
+	}
+	
+	function checkPassword() {
+		if(inputPassword.value.length >=8 && inputPassword.value.match(/\d/)) {
+			inputPassword.classList.remove('error');
+			return true
+		} else {
+			inputPassword.classList.add('error');
+			return false
+		}
+	}
+	
 
 	btnToggle.addEventListener('click', () => {
 		if(inputPassword.type === 'password') {
@@ -51,12 +63,13 @@ if(inputEmail && inputPassword) {
 		}
 	})
 
-	inputPassword.addEventListener('blur', () => {
-		if(inputPassword.value.length >=8 && inputPassword.value.match(/\d/)) {
-			inputPassword.classList.remove('error');
-		} else {
-			inputPassword.classList.add('error');
-		}
+	inputEmail.addEventListener('blur', () => {
+		checkInput();
 	})
+	inputPassword.addEventListener('blur', () => {
+		checkPassword();
+	})
+
+
 }
 

@@ -56,7 +56,7 @@
 			</div>
 			<div class="sidebar__items">
 				<h2 class="sidebar__label">PROJECTS</h2>
-				<ul class="sidebar__list project">	
+				<ul class="sidebar__list project" id="projects-list">	
 					<li class="sidebar__item">
 						<a href="#" class="sidebar__link">
 							<img src="assets/dashboard/icon/project-square-green.svg" alt="project-figure" class="sidebar__icon">
@@ -80,6 +80,9 @@
 							<img src="assets/dashboard/icon/project-square-orange.svg" alt="project-figure" class="sidebar__icon">
 							<h3 class="sidebar__title">Social Media Strategy</h3>
 						</a>
+					</li>
+					<li class="sidebar__item" id="new-project-wrapper">
+						<input type="text" id="new-project-input" class="sidebar__link hidden" placeholder="Project name...">
 					</li>
 				</ul>
 			</div>
@@ -174,7 +177,7 @@
 		</header>
 
 		<section class="starter">
-			<h2 class="starter__title">Innovation Starter Pack</h2>
+			<h2 class="starter__title" id="animated-title">Innovation Starter Pack</h2>
 			<p class="starter__subtitle">Kickstart your innovation process with our comprehensive selection of predefined prompts.</p>
 			<div class="starter__categories categories">
 				<div class="categories__block">
@@ -360,14 +363,50 @@
 							<p class="invite__edit-title">Olivia Sharma</p>
 							<button class="invite__edit-close">×</button>
 						</div>
-						<div class="invite__edit-list">
-							<span>
+						<div class="invite__edit-block">
+							<h3 class="invite__edit-txt">
 								<span class="hidden" >can edit</span>
 								<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.000000" height="16.000000" fill="none" customFrame="#000000">
 									<rect id="chevron-down" width="16.000000" height="16.000000" x="0.000000" y="0.000000" />
 									<path id="icon" d="M4 6.66667L7.5286 10.1953C7.78895 10.4556 8.21106 10.4556 8.47141 10.1953L12 6.66667" stroke="rgb(182, 240, 156, 1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.500000" />
 								</svg>
-							</span>
+							</h3>
+							<ul class="invite__edit-list">
+								<h2 class="invite__edit-text">Users</h2>
+								<li class="invite__edit-item">
+									<a href="#" class="invite__edit-link">
+										<div class="invite__edit-users users__info">
+											<img src="assets/dashboard/img/modal-user5.png" alt="avatar-invite" class="user__info-image">
+											<div class="users__info-text">
+												<h2>Marcus Chen</h2>
+												<p>@marc</p>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="invite__edit-item">
+									<a href="#" class="invite__edit-link">
+										<div class="invite__edit-users users__info">
+											<img src="assets/dashboard/img/modal-user6.png" alt="avatar-invite" class="user__info-image">
+											<div class="users__info-text">
+												<h2>Ava Gupta</h2>
+												<p>@avyavy</p>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="invite__edit-item">
+									<a href="#" class="invite__edit-link">
+										<div class="invite__edit-users users__info">
+											<img src="assets/dashboard/img/modal-user7.png" alt="avatar-invite" class="user__info-image">
+											<div class="users__info-text">
+												<h2>Lucas Ortiz</h2>
+												<p>@luckyluc</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 					<button class="invite__button button">Invite
