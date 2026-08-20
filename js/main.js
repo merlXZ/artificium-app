@@ -70,6 +70,7 @@ if(inputEmail && inputPassword) {
 		checkPassword();
 	})
 
-
 }
+
+
 

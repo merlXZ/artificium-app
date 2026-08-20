@@ -1,0 +1,131 @@
+.chat {
+	&__main {
+		// position: relative;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+	}
+	&__main-header {
+		position: fixed;
+		width: calc(100% - 760px);
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+		padding: 16px 0px 16px 0px;
+		margin-bottom: 16px;
+		background: var(--bg-main);
+		z-index: 100;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 112px;
+			top: 100%;
+			left: 0;
+			background: linear-gradient(360.00deg, rgba(19, 22, 25, 0) 0%,rgba(19, 22, 25, 1) 100%);
+			z-index: 10;
+		}
+	}
+	&__main-title {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		h2 {
+			color: var(--color-main);
+			font-size: $fs-h3;
+			line-height: $lh-heading-xs;
+			font-weight: $fw-bolrd;
+		}
+		span {
+			display: inline-flex;
+			color: var(--color-primmary);
+			font-size: $fs-very-small;
+			font-weight: $fw-semibold;
+			padding: 12px 16px;
+			border-top: 1px solid rgba(255, 255, 255, 0.08);
+			border-radius: 16px;
+			background: linear-gradient(90deg, rgba(146, 227, 169, 0.1) 0%, rgba(146, 227, 169, 0.05) 100%);
+		}
+	}
+	&__main-data {
+		margin-top: 80px;
+	}
+	&__main-novigation {
+		display: flex;
+		align-items: center;
+		gap: 44px;
+	}
+	&__main-favourites {
+		background: none;
+		cursor: pointer;
+	}
+	&__main-setting {
+		background: none;
+		cursor: pointer;
+	}
+	&__sidebar {
+		width: 312px;
+		height: 100%;
+		flex-shrink: 0;
+		border: 1px solid var(--color-noble-600);
+		border-radius: 16px;
+		overflow: hidden;
+	}
+}
+
+.chats {
+	display: flex;
+	align-items:  start;
+	gap: 24px;
+	width: 100%;
+	padding: 16px;
+	border: 1px solid var(--color-noble-600);
+	border-radius: 16px;
+	margin-bottom: 20px;
+	&__img {
+		position: relative;
+		top: -10px;
+	}
+	&__content {
+		flex: 1;
+	}
+	&__top {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+		padding-top: 8px;
+	}
+	&__top-name {
+		color: rgba(255, 255, 255, 1);
+		font-size: $fs-body;
+		font-weight: $fw-semibold;
+		line-height: $lh-body-l;
+		letter-spacing: 0.15px;
+	}
+	&__top-time {
+		color: var(--color-noble-400);
+		font-size: $fs-very-small;
+		font-weight: $fw-medium;
+		line-height: $lh-body-s;
+		letter-spacing: 0.15px;
+	}
+	&__top-copy {
+		display: flex;
+		margin-left: auto;
+		cursor: pointer;
+	}
+	&__text {
+		color: rgba(155, 156, 158, 1);
+		font-size: $fs-body;
+		font-weight: $fw-semibold;
+		line-height: $lh-body-l;
+		letter-spacing: 0.15px;
+		padding-bottom: 8px;
+	}
+}

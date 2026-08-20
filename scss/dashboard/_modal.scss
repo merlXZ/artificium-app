@@ -184,6 +184,14 @@
 		background: var(--color-noble-600);
 		padding: 8px 16px;
 	}
+	&__edit-scroll {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		overflow-x: auto;
+		flex: 1;
+		min-width: 0;
+	}
 	&__edit-user {
 		display: flex;
 		align-items: center;
@@ -212,9 +220,10 @@
 		cursor: pointer;
 	}
 	&__edit-block {
-
 		margin-left: auto;
 		cursor: pointer;
+		flex-shrink: 0;
+		white-space: nowarp;
 		span {
 			display: flex;
 			align-items: center;
@@ -304,6 +313,10 @@
 			width: 100%;
 			justify-content: center;
 		}
+	}
+	&__edit-icon {
+		width: 24px;
+		height: 24px;
 	}
 }
 .users {

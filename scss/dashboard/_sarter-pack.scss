@@ -1,12 +1,41 @@
 .starter {
-	padding: 100px 0px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+	flex: 1;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	&::-webkit-scrollbar {
+		width: 6px; 
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent; 
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #333333;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+  	background: #555555; 
+	}
 	@media screen and (max-width: 425px) {
 		padding: 50px 0;
 	}
-
+	&-artificium {
+		padding: 100px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&-chat {
+		display: flex;
+		gap: 32px;
+		height: 100%;
+		padding: 32px;
+	}
+	&-container {
+		&.hiddens {
+			display: none;
+		}
+	}
 	&__title {
 		color: var(--color-main);
 		font-size: $fs-h1;
@@ -34,8 +63,8 @@
 	display: grid;
 	grid-template-columns: repeat(4, 200px);
 	gap: 64px;
-	@media screen and (max-width: 1315px) {
-		width: 300px;
+	@media screen and (max-width: 1350px) {
+		width: 100%;
 		display: flex;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
@@ -45,12 +74,21 @@
     scrollbar-width: none;
 		padding: 0 16px;
 	}
+	@media screen and (max-width: 1023px) {
+		width: 500px;
+	}
+	@media screen and (max-width: 848px) {
+		width: 300px;
+	}
 	&__block {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		@media screen and (max-width: 1315px) {
+		@media screen and (max-width: 1350px) {
+			flex: 0 0 60%;
+		}
+		@media screen and (max-width: 1023px) {
 			flex: 0 0 100%;
 		}
 	}
@@ -61,7 +99,7 @@
 		background: linear-gradient(145.32deg, rgba(215.22, 236.94, 236.94, 0.16) 0%,rgba(204.48, 234.81, 234.81, 0) 100%);
 		margin-bottom: 16px;
 		padding: 14px 18px;
-		@media screen and (max-width: 1315px) {
+		@media screen and (max-width: 1350px) {
 			box-shadow: none;
 		}
 	}

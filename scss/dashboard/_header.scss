@@ -1,6 +1,7 @@
 .project {
 	border-radius: 20px;
 	background: rgba(13, 15, 16, 1);
+	flex-shrink: 0;
 	&__top {
 		display: flex;
 		align-items: center;
