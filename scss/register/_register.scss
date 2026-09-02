@@ -2,10 +2,9 @@
 	display: flex;
 	width: 100%;
 	height: 100vh;
+	overflow-x: hidden;
 	overflow-y: auto;
 	@media screen and (max-width: 1023px) {
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
 	@media screen and (max-width: 767px) {
 		height: 100%;
