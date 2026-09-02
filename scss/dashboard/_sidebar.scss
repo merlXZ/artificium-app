@@ -32,6 +32,9 @@
 		overflow-y: auto;
 		height: 100%;
 	}
+	&-project {
+		overflow-y: auto;
+	}
 	&__group {
 		display: flex;
 		align-items: center;

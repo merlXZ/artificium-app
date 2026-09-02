@@ -3,6 +3,7 @@
 	min-height: 0;
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
 	&::-webkit-scrollbar {
 		width: 6px; 
 	}
@@ -54,9 +55,7 @@
 		margin-bottom: 64px;
 		@media screen and (max-width: 768px) {
 			text-align: center;
-		}
-		@media screen and (max-width: 375px) {
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 		}
 	}
 }
@@ -104,6 +103,9 @@
 		padding: 14px 18px;
 		@media screen and (max-width: 1350px) {
 			box-shadow: none;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
 		}
 	}
 	&__block-title {
