@@ -36,9 +36,13 @@
 		background: rgba(26, 29, 33, 0.96);
 		width: 100%;
 		max-width: 720px;
+		max-height: 90vh;
 		padding: 40px;
 		transform: translateY(20px);
 		margin: 0 15px;
+		overflow-y: auto;
+		@media screen and (max-width: 767px) {
+		}
 	}
 	&__close {
 		position: absolute;
@@ -87,6 +91,9 @@
 		line-height: $lh-body-s;
 		letter-spacing: 0.15px;
 		font-weight: $fw-semibold;
+		@media screen and (max-width: 430px) {
+			font-size: 0.90rem;
+		}
 		svg {
 			transition: 340ms ease-out;
 		}
@@ -147,6 +154,9 @@
 	}
 	&__copylink-button {
 		padding: 16px 24px;
+		@media screen and (max-width: 425px) {
+			width: 100%;
+		}
 	}
 	&__copylink-link {
 		cursor: pointer;
@@ -163,6 +173,11 @@
 		border-radius: 12px;
 		box-shadow: inset 0px 8px 12px 0px rgba(255, 255, 255, 0.08),0px 24px 24px -16px rgba(0, 0, 0, 0.12),inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08);
 		background: linear-gradient(145.32deg, rgba(215.22, 236.94, 236.94, 0.16) 0%,rgba(204.48, 234.81, 234.81, 0) 100%);
+		@media screen and (max-width: 425px) {
+			width: 100%;
+			justify-content: center;
+			padding: 12px 24px;
+		}
 	}
 }
 .invite {
@@ -232,6 +247,9 @@
 			line-height: $lh-body-l;
 			letter-spacing: 0.15px;
 			font-weight: $fw-medium;
+			@media screen and (max-width: 425px) {
+				display: none;
+			}
 		}
 	}
 
@@ -323,7 +341,19 @@
 	display: flex;
 	flex-direction: column;
 	gap: 18px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 25px;
+	}
 	&__info {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		@media screen and (max-width: 424px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__info-wrapper {
 		display: flex;
 		align-items: center;
 		gap: 16px;
@@ -349,6 +379,10 @@
 		border-top: 1px solid rgba(255, 255, 255, 0.08);
 		border-radius: 12px;
 		padding: 12px;
+		@media screen and (max-width: 424px) {
+			margin-left: 0px;
+			width: 100%;
+		}
 		&-owner {
     color: #92e3a9;
     background: linear-gradient(90deg, rgba(146, 227, 169, 0.1) 0%, rgba(146, 227, 169, 0.05) 100%);
@@ -361,11 +395,5 @@
 			color: #a49ee8;
 			background: linear-gradient(90deg, rgba(164, 158, 232, 0.1) 0%, rgba(164, 158, 232, 0.05) 100%);
 		}
-	}
-}
-
-.hidden {
-	@media screen and (max-width: 425px) {
-		opacity: 0;
 	}
 }

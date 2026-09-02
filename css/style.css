@@ -91,6 +91,7 @@ input,
 textarea {
   outline: none;
   border: none;
+  font-size: 16px;
 }
 
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
@@ -1695,10 +1696,12 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   background: rgba(26, 29, 33, 0.96);
   width: 100%;
   max-width: 720px;
+  max-height: 90vh;
   padding: 40px;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   margin: 0 15px;
+  overflow-y: auto;
 }
 .modal__close {
   position: absolute;
@@ -1755,6 +1758,11 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   line-height: 1.125rem;
   letter-spacing: 0.15px;
   font-weight: 600;
+}
+@media screen and (max-width: 430px) {
+  .modal__more {
+    font-size: 0.9rem;
+  }
 }
 .modal__more svg {
   -webkit-transition: 340ms ease-out;
@@ -1843,6 +1851,11 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
 .modal__copylink-button {
   padding: 16px 24px;
 }
+@media screen and (max-width: 425px) {
+  .modal__copylink-button {
+    width: 100%;
+  }
+}
 .modal__copylink-link {
   cursor: pointer;
   display: -webkit-box;
@@ -1863,6 +1876,15 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   -webkit-box-shadow: inset 0px 8px 12px 0px rgba(255, 255, 255, 0.08), 0px 24px 24px -16px rgba(0, 0, 0, 0.12), inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08);
           box-shadow: inset 0px 8px 12px 0px rgba(255, 255, 255, 0.08), 0px 24px 24px -16px rgba(0, 0, 0, 0.12), inset 16px 24px 64px -24px rgba(255, 255, 255, 0.08);
   background: linear-gradient(145.32deg, rgba(215.22, 236.94, 236.94, 0.16) 0%, rgba(204.48, 234.81, 234.81, 0) 100%);
+}
+@media screen and (max-width: 425px) {
+  .modal__copylink-link {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 12px 24px;
+  }
 }
 
 .invite {
@@ -1966,6 +1988,11 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   line-height: 1.5rem;
   letter-spacing: 0.15px;
   font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+  .invite__edit-block span {
+    display: none;
+  }
 }
 .invite__edit-txt {
   display: -webkit-box;
@@ -2080,7 +2107,32 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
           flex-direction: column;
   gap: 18px;
 }
+@media screen and (max-width: 767px) {
+  .users {
+    margin-bottom: 25px;
+  }
+}
 .users__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+@media screen and (max-width: 424px) {
+  .users__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.users__info-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2109,6 +2161,12 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   border-radius: 12px;
   padding: 12px;
 }
+@media screen and (max-width: 424px) {
+  .users__info-button {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
 .users__info-button-owner {
   color: #92e3a9;
   background: -webkit-gradient(linear, left top, right top, from(rgba(146, 227, 169, 0.1)), to(rgba(146, 227, 169, 0.05)));
@@ -2123,12 +2181,6 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   color: #a49ee8;
   background: -webkit-gradient(linear, left top, right top, from(rgba(164, 158, 232, 0.1)), to(rgba(164, 158, 232, 0.05)));
   background: linear-gradient(90deg, rgba(164, 158, 232, 0.1) 0%, rgba(164, 158, 232, 0.05) 100%);
-}
-
-@media screen and (max-width: 425px) {
-  .hidden {
-    opacity: 0;
-  }
 }
 
 .chat__main {
