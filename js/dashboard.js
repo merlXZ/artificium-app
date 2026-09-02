@@ -310,3 +310,6 @@ tabsLink[0].addEventListener('click', () => {
 tabsLink[1].addEventListener('click', () => {
 	messageInput.placeholder = 'What you want to share today?';
 })
+message.addEventListener('click', () => {
+	message.classList.add('')
+})

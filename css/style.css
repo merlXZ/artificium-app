@@ -93,13 +93,26 @@ textarea {
   border: none;
 }
 
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 1px solid var(--color-primmary);
+  outline-offset: 2px;
+}
+a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:focus-visible), textarea:focus:not(:focus-visible), [tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
+}
+@media screen and (max-width: 767px) {
+  .login {
+    height: 100%;
+  }
 }
 .login__left {
   -webkit-box-flex: 1;
@@ -462,12 +475,17 @@ textarea {
   display: flex;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 }
 @media screen and (max-width: 1023px) {
   .register {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .register {
+    height: 100%;
   }
 }
 .register-left {
@@ -1282,8 +1300,14 @@ textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  min-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .starter::-webkit-scrollbar {
   width: 6px;
@@ -1298,16 +1322,13 @@ textarea {
 .starter::-webkit-scrollbar-thumb:hover {
   background: #555555;
 }
-@media screen and (max-width: 425px) {
-  .starter {
-    padding: 50px 0;
-  }
-}
 .starter-artificium {
-  padding: 100px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1318,6 +1339,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: auto;
 }
 .starter-chat {
   display: -webkit-box;
@@ -1355,6 +1377,11 @@ textarea {
     text-align: center;
   }
 }
+@media screen and (max-width: 375px) {
+  .starter__subtitle {
+    margin-bottom: 15px;
+  }
+}
 
 .categories {
   display: grid;
@@ -1371,6 +1398,7 @@ textarea {
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     gap: 20px;
+    z-index: 10;
   }
   .categories::-webkit-scrollbar {
     display: none;
@@ -1535,6 +1563,7 @@ textarea {
   transition: 245ms ease-in;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  z-index: 10;
 }
 .message:focus-within {
   -webkit-box-shadow: 0px 8px 10px -6px rgba(182, 240, 156, 0.04), 0px 25px 50px -12px rgba(182, 240, 156, 0.12), 0px 0px 0px 5px rgba(182, 240, 156, 0.12);
@@ -2117,8 +2146,15 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow-y: auto;
+  scrollbar-width: 0px;
+  -ms-overflow-style: none;
+}
+.chat__main::-webkit-scrollbar {
+  display: none;
+  width: 0;
 }
 .chat__main-header {
   position: fixed;
@@ -2180,6 +2216,8 @@ textarea {
   background: linear-gradient(90deg, rgba(146, 227, 169, 0.1) 0%, rgba(146, 227, 169, 0.05) 100%);
 }
 .chat__main-data {
+  max-height: 100%;
+  overflow-y: auto;
   margin-top: 80px;
 }
 .chat__main-novigation {
