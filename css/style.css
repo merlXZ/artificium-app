@@ -837,14 +837,14 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
 .project__top-icon {
   display: none;
   position: absolute;
-  top: 2%;
-  right: 5%;
-  background: rgb(13, 15, 16);
+  top: 5%;
+  right: 4%;
   border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
   .project__top-icon {
     display: block;
+    z-index: 1000;
   }
 }
 .project__bottom {
@@ -1005,8 +1005,9 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
 }
 @media screen and (max-width: 768px) {
   .sidebar {
-    width: 250px;
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     left: -1000px;
     z-index: 100;
   }
@@ -1030,7 +1031,8 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 100%;
 }
 .sidebar__group {
@@ -1072,10 +1074,14 @@ a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:
   -webkit-transition: 320ms ease-out;
   transition: 320ms ease-out;
 }
+@media screen and (max-width: 768px) {
+  .sidebar__group-chevron {
+    display: none;
+  }
+}
 .sidebar__items {
   padding: 24px 0px;
   max-height: 50vh;
-  overflow-y: auto;
 }
 .sidebar__items::-webkit-scrollbar {
   width: 6px;
